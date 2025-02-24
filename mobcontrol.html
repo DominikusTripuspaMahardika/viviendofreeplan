@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>Detail Mob Control - ViVienDo</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/viviendochannel.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+  </head>
+  <body>
+    <!-- Loader Page -->
+    <div class="pageloader-viviendo"></div>
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area-navbarviviendo">
+        <nav class="main-nav-navbarviviendo">
+          <!-- Logo Section -->
+          <a href="mobcontrol.html" class="logo-navbarviviendo-logo">
+            <img src="assets/images/ViVienDo_logo.png" alt="ViVienDo Logo" class="logo-navbarviviendo-logo-img">
+          </a>
+          <!-- Navigation Menu -->
+          <ul class="nav-navbarviviendo-menu">
+            <li class="nav-navbarviviendo-menu-li"><a href="home.html" class="navbarviviendo-link"><i class="fas fa-home"></i> Rumah</a></li>
+            <li class="nav-navbarviviendo-menu-li"><a href="event.html" class="navbarviviendo-link"><i class="fas fa-calendar-alt"></i> Acara</a></li>
+            <li class="nav-navbarviviendo-menu-li"><a href="itconsultation.html" class="navbarviviendo-link"><i class="fas fa-newspaper"></i> Artikel</a></li>
+            <li class="nav-navbarviviendo-menu-li"><a href="service.html" class="navbarviviendo-link"><i class="fas fa-concierge-bell"></i> Layanan</a></li>
+            <li class="nav-navbarviviendo-menu-li"><a href="contact.html" class="navbarviviendo-link"><i class="fas fa-envelope"></i> Kontak</a></li>
+          </ul>
+          <!-- Mobile Menu Trigger -->
+          <div class="menu-trigger-navbarviviendo-trigger" onclick="toggleMenunavbarviviendo()">
+            <span class="menu-trigger-navbarviviendo-trigger-span"></span>
+            <span class="menu-trigger-navbarviviendo-trigger-span"></span>
+            <span class="menu-trigger-navbarviviendo-trigger-span"></span>
+          </div>
+        </nav>
+      </header>
+    <!-- ***** Header Area End ***** -->
+    <!-- Scroll to Top Button -->
+    <button onclick="topFunction()" id="scrollGoTop" title="Go to top">
+      <svg class="scrollgotop-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 4L4 12H8V20H16V12H20L12 4Z" fill="currentColor"/>
+      </svg>
+    </button>
+  <!-- Popup Donasi untuk Panti Asuhan -->
+<div id="donation-popup-dnsipantiasuhan" class="donation-popup-dnsipantiasuhan">
+  <div class="donation-content-dnsipantiasuhan">
+    <button id="close-donation-popup-dnsipantiasuhan" class="close-donation-dnsipantiasuhan">&times;</button>
+    <h2 class="donation-title-dnsipantiasuhan">Dukung Anak-Anak!</h2>
+    <p class="donation-text-dnsipantiasuhan">
+      <strong>Setiap pembelian dan donasi adalah bentuk kepedulian Anda!</strong>
+    </p>
+    <p class="donation-text-dnsipantiasuhan">
+      Hasil dari penjualan akan disumbangkan untuk panti asuhan, khususnya bagi anak-anak yatim piatu dan anak-anak dengan kebutuhan khusus.
+    </p>
+    <p class="donation-warning-dnsipantiasuhan">
+      Setiap rupiah dari penjualan dan donasi memiliki makna besar bagi mereka yang membutuhkan. Dengan membeli, Anda turut berbagi kebahagiaan & harapan untuk masa depan mereka.
+    </p>
+    <button id="donate-now-dnsipantiasuhan" class="donation-button-dnsipantiasuhan">Donate Now</button>
+  </div>
+</div>
+  <!-- Info Container -->
+  <div class="infokeamanan-ifrmskmn">
+    <h3 class="infokeamanan-h3-ifrmskmn">Keamanan Data Terjamin</h3>
+    <p class="infokeamanan-p-ifrmskmn">Setiap hari kami selalu meningkatkan dan menambahkan lebih banyak sistem keamanan untuk memastikan data yang anda beli tetap aman dan mengurangi risiko akun terkena banned. Aplikasi yang digunakan admin adalah aplikasi original dari Play Store bukan mod apk atau mod menu, jadi anda juga bisa menyimpan progres game dengan cara login ke akun Google anda. Perhatian! Tidak ada refund atau pengembalian uang setelah anda melakukan pembayaran, beli sesuai dengan apa yang anda butuhkan.</p>
+  </div>
+    <!-- ***** Mob Control Detail Section Start ***** -->
+<section id="mob-control-details" class="container my-0">
+    <h2 class="text-center mb-4">Rincian Produk</h2>
+    <!-- Button Gacha -->
+    <!--<button class="modern-button-gacharate" id="redeemviviendo-gachaButton">
+    <i class="modern-button-i-gacharate fas fa-tag"></i>Gacha Kode Promo
+  </button><br>-->
+  <div class="testimoniviviendo-product-card">
+    <div class="testimoniviviendo-product-image">
+        <img src="assets/images/testimoni_image.jpg" alt="Product Image" class="testimoniviviendo-product-image-img">
+    </div>
+    <div class="testimoniviviendo-product-details">
+        <div class="testimoniviviendo-product-title">Unlimited Currency</div>
+        <button class="testimoniviviendo-button-unduh" onclick="startDownloadProcesstestimoniviviendo()">
+            <i class="fas fa-download testimoniviviendo-button-unduh-i"></i> Download
+        </button>
+    </div>
+  </div>
+  <!-- PopUp Redirek 5 Detik -->
+  <div id="testimoniviviendo-downloadwarning" class="testimoniviviendo-popup-download-warning" style="display: none;">
+    <p id="testimoniviviendo-warningtext" class="testimoniviviendo-popup-warning-text"><strong>Admin:</strong> I don't give any guarantees for free data</p>
+    <p class="testimoniviviendo-popup-warning-text-p">Redirecting in <span id="testimoniviviendo-countdown" class="testimoniviviendo-popup-p-countdown">5</span> seconds...</p>
+  </div>
+  <!-- PopUp Tautan Unduh -->
+<div id="testimoniviviendo-downloadlink" class="testimoniviviendo-popup-download-link" style="display: none;">
+  <button class="testimoniviviendo-popup-close" onclick="closePopuptestimoniviviendo()" aria-label="Close">&times;</button>
+  <p class="testimoniviviendo-popup-link-text">Your download link is ready:</p>
+  <input type="text" id="testimoniviviendo-download-url" value="https://www.mediafire.com/file/vhyu0faiswbcbnm/UnlimitedCurrency-ViVienDoChannel.zip/file" readonly>
+  <button onclick="copyDownloadLink()" class="testimoniviviendo-button-copylink">Copy Link</button>
+</div>
+<!-- PopUp Notifikasi Copy Link -->
+<div id="testimoniviviendo-copy-notification" class="testimoniviviendo-popup-copy-notification" style="display: none;">
+  <div class="testimoniviviendo-popup-notification-content">
+      <i class="fas fa-check-circle" style="color: green; font-size: 24px;" class="testimoniviviendo-popup-notification-content-i"></i>
+      <p class="testimoniviviendo-popup-notification-content-p">Download link copied to clipboard!</p>
+  </div>
+</div>
+<br>
+<div class="section-mcd" id="section1">
+  <h3>Tier Seraphic <span class="best-label-labeljumlah">BEST</span></h3>
+  <p class="stock-info-labeljumlah">Stok Tersisa: <span id="stock-count-labeljumlah">15</span></p>
+  <p>Catatan: Anda akan langsung bermain dari Tier Seraphic dan bisa masuk ke akun Google untuk menyimpan progres permainan.</p>
+  <button class="modern-button-gvutjk" onclick="showPaymentNotification(event, 93000)">
+    <i class="modern-button-i-gvutjk fas fa-shopping-cart"></i> Buy Now
+  </button>
+</div>
+  <div class="section-mcd" id="section1">
+    <h3>Membuka Transfomers Season Pass</h3>
+    <p>Catatan: Dapatkan Transfomers Season Pass dengan harga yang lebih murah serta klaim bintang terbatas.</p>
+    <button class="modern-button-gvutjk" onclick="showPaymentNotification(event, 50000)">
+      <i class="modern-button-i-gvutjk fas fa-shopping-cart"></i> Buy Now
+    </button>
+  </div> 
+  <div class="section-mcd" id="section1">
+    <h3>Memodifikasi Bintang di Tantangan Loadout</h3>
+    <p>Catatan: Jumlah Bintang di Tantangan Loadout yang menentukan adalah pembeli, bukan ditentukan penjual.</p>
+    <button class="modern-button-gvutjk" onclick="showPaymentNotification(event, 65000)">
+      <i class="modern-button-i-gvutjk fas fa-shopping-cart"></i> Buy Now
+    </button>
+  </div>
+  <div class="section-mcd" id="section1">
+    <h3>Memodifikasi Bintang di Tantangan Stardust</h3>
+    <p>Catatan: Jumlah Bintang di Tantangan Stardust yang menentukan adalah pembeli, bukan ditentukan penjual.</p>
+    <button class="modern-button-gvutjk" onclick="showPaymentNotification(event, 65000)">
+      <i class="modern-button-i-gvutjk fas fa-shopping-cart"></i> Buy Now
+    </button>
+  </div>
+</section>
+  <!-- Paket Harga Mob Control -->
+<section class="pricing-section-bulananorpermanen">
+    <div class="container-bulananorpermanen">
+      <div class="pricing-cards-bulananorpermanen">
+        <div class="pricing-card-bulananorpermanen">
+          <h3 class="plan-title-bulananorpermanen">VIP Club Permanen</h3>
+          <ul class="features-bulananorpermanen">
+            <h4 class="plan-title-h4-bulananorpermanen">Nikmati Tanpa Gangguan</h4>
+            <li class="feature-item-bulananorpermanen-silang">Tidak ada iklan permanen</li>
+            <li class="feature-item-bulananorpermanen">3 Skip'its per hari</li>
+            <li class="feature-item-bulananorpermanen-silang">Pengganda gratis tanpa batas</li>
+            <li class="feature-item-bulananorpermanen-silang">Pilih kapan akan menggunakan Skip’its atau ADS</li>
+            <h4 class="plan-title-h4-bulananorpermanen">Tunjukkan Pada Semua Orang Siapa Bosnya</h4>
+            <li class="feature-item-bulananorpermanen">Nama pengguna silver</li>
+            <li class="feature-item-bulananorpermanen">Buka kunci Triple Cannon selamanya</li>
+            <h4 class="plan-title-h4-bulananorpermanen">Manfaat Premium</h4>
+            <li class="feature-item-bulananorpermanen-silang">Dukungan pelanggan prioritas</li>
+            <li class="feature-item-bulananorpermanen-silang">Saluran Discord eksklusif dengan tim pengembang</li>
+          </ul><br>
+          <button class="modern-button-bulananorpermanen" onclick="showPaymentNotification(event, 90000)">
+            <i class="modern-button-i-bulananorpermanen fas fa-shopping-cart"></i> Buy Now
+          </button>
+        </div>
+        <div class="pricing-card-bulananorpermanen popular-bulananorpermanen">
+          <h3 class="plan-title-bulananorpermanen">Elite Club Permanen</h3>
+          <ul class="features-bulananorpermanen">
+            <h4 class="plan-title-h4-bulananorpermanen">Nikmati Tanpa Gangguan</h4>
+            <li class="feature-item-bulananorpermanen">Tidak ada iklan permanen</li>
+            <li class="feature-item-bulananorpermanen">6 Skip'its per hari</li>
+            <li class="feature-item-bulananorpermanen">Pengganda gratis tanpa batas</li>
+            <li class="feature-item-bulananorpermanen">Pilih kapan akan menggunakan Skip’its atau ADS</li>
+            <h4 class="plan-title-h4-bulananorpermanen">Tunjukkan Pada Semua Orang Siapa Bosnya</h4>
+            <li class="feature-item-bulananorpermanen">Nama pengguna gold</li>
+            <li class="feature-item-bulananorpermanen">Buka kunci Triple Cannon selamanya</li>
+            <h4 class="plan-title-h4-bulananorpermanen">Manfaat Premium</h4>
+            <li class="feature-item-bulananorpermanen">Dukungan pelanggan prioritas</li>
+            <li class="feature-item-bulananorpermanen">Saluran Discord eksklusif dengan tim pengembang</li>
+          </ul><br>
+          <button class="modern-button-bulananorpermanen" onclick="showPaymentNotification(event, 229000)">
+            <i class="modern-button-i-bulananorpermanen fas fa-shopping-cart"></i> Buy Now
+          </button>
+        </div>
+        <div class="pricing-card-bulananorpermanen">
+          <h3 class="plan-title-bulananorpermanen">Full Data</h3>
+          <ul class="features-bulananorpermanen">
+            <h4 class="plan-title-h4-bulananorpermanen">Akses Semua Fitur</h4>
+            <li class="feature-item-bulananorpermanen">Satu Paket Semua Akses Data</li>
+            <li class="feature-item-bulananorpermanen">Login Google Play</li>
+            <h4 class="plan-title-h4-bulananorpermanen">Nikmati Tanpa Gangguan</h4>
+            <li class="feature-item-bulananorpermanen">Tidak ada iklan permanen</li>
+            <li class="feature-item-bulananorpermanen">3 Skip'its per hari</li>
+            <li class="feature-item-bulananorpermanen">Pengganda gratis tanpa batas</li>
+            <li class="feature-item-bulananorpermanen">Pilih kapan akan menggunakan Skip’its atau ADS</li>
+            <h4 class="plan-title-h4-bulananorpermanen">Tunjukkan Pada Semua Orang Siapa Bosnya</h4>
+            <li class="feature-item-bulananorpermanen">Nama pengguna gold</li>
+            <li class="feature-item-bulananorpermanen">Buka kunci Triple Cannon selamanya</li>
+            <h4 class="plan-title-h4-bulananorpermanen">Manfaat Premium</h4>
+            <li class="feature-item-bulananorpermanen">Dukungan pelanggan prioritas</li>
+            <li class="feature-item-bulananorpermanen">Saluran Discord eksklusif dengan tim pengembang</li>
+          </ul><br>
+          <button class="modern-button-bulananorpermanen" onclick="showPaymentNotification(event, 397500)">
+            <i class="modern-button-i-bulananorpermanen fas fa-shopping-cart"></i> Buy Now
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Gacha Section -->
+  <div class="gacha-container text-center">
+    <div id="gachaModal" class="gacha-modal">
+      <div class="gacha-modal-content">
+        <span class="close-gacha" onclick="closeGachaModal()">&times;</span>
+        <h3 id="gachaResultTitle">Anda menang!</h3>
+        <p id="gachaResultText">Selamat! Anda memenangkan kode promo:</p>
+        <div id="promoCode" class="promo-code"></div>
+        <button onclick="closeGachaModal()" class="btn btn-primary">Close</button>
+      </div>
+    </div>
+  </div>
+  <!-- Custom Alert Modal -->
+  <div id="redeemviviendo-alertModal" class="redeemviviendo-alert-container">
+    <div class="redeemviviendo-alert-box">
+      <h2>Upaya Gacha Maks Tercapai</h2>
+      <p>Kamu telah mencapai percobaan Gacha maksimum untuk hari ini. Silakan kembali besok!</p>
+      <button class="redeemviviendo-alert-close" onclick="closeRedeemviviendoAlert()">Close</button>
+    </div>
+  </div>
+  <!-- ***** Mob Control Detail Section End ***** -->
+    <!-- Footer -->
+    <footer class="footer-ftrvvdm">
+      <div class="footer-container-ftrvvdm">
+        <div class="footer-logo-ftrvvdm">
+          <img src="assets/images/ViVienDo_logo.png" alt="ViVienDo Logo" style="height: 50px;" class="footer-logo-img-ftrvvdm">
+        </div>
+      </div>
+      <div class="footer-bottom-ftrvvdm">
+        <p class="footer-bottom-p-ftrvvdm">All rights reserved</p>
+        <span class="footer-version-ftrvvdm">Versi 7.8.5</span>
+      </div>
+    </footer>
+    <!-- Scripts -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/counter.js"></script>
+    <script src="assets/js/header.js"></script>
+    <script src="assets/js/confirmpaymentindonesia.js"></script>
+    <script src="assets/js/socialbar.js"></script>
+    <script src="assets/js/notifikasiyoutube.js"></script>
+    <script src="assets/js/hiddenmessagemobcontrol_id.js"></script>
+    <script src="assets/js/gacharate.js"></script>
+    <script src="assets/js/donasi.js"></script>
+    <script src="assets/js/kepuasan.js"></script>
+    <script src="assets/js/languageworld.js"></script>
+    <script src="assets/js/scrolltoppage.js"></script>
+    <script src="assets/js/downloadlinktesti.js"></script>
+  </body>
+</html>

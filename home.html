@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>Home - ViVienDo</title>
+    <!-- Additional Favicon Formate -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/viviendochannel.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+  </head>
+<body>
+  <!-- Loader Page -->
+  <div class="pageloader-viviendo"></div>
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area-navbarviviendo">
+      <nav class="main-nav-navbarviviendo">
+        <!-- Logo Section -->
+        <a href="home.html" class="logo-navbarviviendo-logo">
+          <img src="assets/images/ViVienDo_logo.png" alt="ViVienDo Logo" class="logo-navbarviviendo-logo-img">
+        </a>
+        <!-- Navigation Menu -->
+        <ul class="nav-navbarviviendo-menu">
+          <li class="nav-navbarviviendo-menu-li"><a href="home.html" class="navbarviviendo-link"><i class="fas fa-home"></i> Rumah</a></li>
+          <li class="nav-navbarviviendo-menu-li"><a href="event.html" class="navbarviviendo-link"><i class="fas fa-calendar-alt"></i> Acara</a></li>
+          <li class="nav-navbarviviendo-menu-li"><a href="itconsultation.html" class="navbarviviendo-link"><i class="fas fa-newspaper"></i> Artikel</a></li>
+          <li class="nav-navbarviviendo-menu-li"><a href="service.html" class="navbarviviendo-link"><i class="fas fa-concierge-bell"></i> Layanan</a></li>
+          <li class="nav-navbarviviendo-menu-li"><a href="contact.html" class="navbarviviendo-link"><i class="fas fa-envelope"></i> Kontak</a></li>
+        </ul>
+        <!-- Mobile Menu Trigger -->
+        <div class="menu-trigger-navbarviviendo-trigger" onclick="toggleMenunavbarviviendo()">
+          <span class="menu-trigger-navbarviviendo-trigger-span"></span>
+          <span class="menu-trigger-navbarviviendo-trigger-span"></span>
+          <span class="menu-trigger-navbarviviendo-trigger-span"></span>
+        </div>
+      </nav>
+    </header>
+  <!-- ***** Header Area End ***** -->
+  <!-- Scroll to Top Button -->
+  <button onclick="topFunction()" id="scrollGoTop" title="Go to top">
+    <svg class="scrollgotop-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 4L4 12H8V20H16V12H20L12 4Z" fill="currentColor"/>
+    </svg>
+  </button>
+  <!-- Schedule Section -->
+  <div class="container-jadwal">
+    <!-- Jadwal Jam Operasional -->
+    <div class="card-jadwal operational-hours-jadwal">
+      <div class="card-header-jadwal">
+        <i class="fas fa-clock"></i> Operational
+      </div>
+      <div class="card-body-jadwal">
+        <ul>
+          <li><span>Senin - Jumat:</span> 07:00 - 15:40</li>
+          <li><span>Sabtu:</span> 10:00 - 16:00</li>
+          <li><span>Minggu:</span> Libur</li>
+        </ul>
+        <!-- Dropdown Schedule -->
+        <div class="schedule-toggle-jadwal" onclick="toggleSchedule('schedule-message-jadwal-1', 'toggle-icon-jadwal-1')">
+          <span>Klik untuk melihat pesan</span>
+          <i id="toggle-icon-jadwal-1" class="fas fa-arrow-down toggle-icon-jadwal"></i>
+        </div>
+        <div id="schedule-message-jadwal-1" class="schedule-message-jadwal">
+          Saya hanya melayani pelanggan sesuai jadwal yang telah ditentukan, lebih dari itu saya mohon maaf jika ada beberapa pesan yang tidak saya tanggapi.
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Single Product List -->
+  <!-- Popup Donasi untuk Panti Asuhan -->
+<div id="donation-popup-dnsipantiasuhan" class="donation-popup-dnsipantiasuhan">
+  <div class="donation-content-dnsipantiasuhan">
+    <button id="close-donation-popup-dnsipantiasuhan" class="close-donation-dnsipantiasuhan">&times;</button>
+    <h2 class="donation-title-dnsipantiasuhan">🙏 Mohon untuk tidak meminta data game secara gratis!</h2>
+  </div>
+</div>
+  <!-- Button Gacha -->
+  <!-- Gacha Section -->
+  <div class="gacha-container text-center">
+    <div id="gachaModal" class="gacha-modal">
+      <div class="gacha-modal-content">
+        <span class="close-gacha" onclick="closeGachaModal()">&times;</span>
+        <h3 id="gachaResultTitle">Anda menang!</h3>
+        <p id="gachaResultText">Selamat! Anda memenangkan kode promo:</p>
+        <div id="promoCode" class="promo-code"></div>
+        <button onclick="closeGachaModal()" class="btn btn-primary">Close</button>
+      </div>
+    </div>
+  </div>
+  <!-- Custom Alert Modal -->
+  <div id="redeemviviendo-alertModal" class="redeemviviendo-alert-container">
+    <div class="redeemviviendo-alert-box">
+      <h2>Upaya Gacha Maks Tercapai</h2>
+      <p>Kamu telah mencapai percobaan Gacha maksimum untuk hari ini. Silakan kembali besok!</p>
+      <button class="redeemviviendo-alert-close" onclick="closeRedeemviviendoAlert()">Close</button>
+    </div>
+  </div>
+  <!--<button class="modern-button-gacharate" id="redeemviviendo-gachaButton">
+    <i class="modern-button-i-gacharate fas fa-tag"></i>Gacha Kode Promo
+  </button>-->
+<section class="product-section-modern-gvutjk">
+  <div class="product-grid-modern-gvutjk">
+    <!-- Game 1 (Tersedia untuk Indonesia) -->
+    <div class="single-product-gvutjk-modern">
+      <div class="product-image-modern-gvutjk">
+        <img class="single-product-img-gvutjk" src="assets/images/mobcontrol.jpg" alt="Mob Control">
+      </div>
+      <div class="product-details-modern-gvutjk">
+        <p class="single-product-p-gvutjk">Game ini menghadirkan lebih banyak tantangan, acara baru, serta berbagai jenis item yang unik.</p>
+        <button class="modern-button-gvutjk" onclick="showGameAlert('Mob Control')">
+          <i class="modern-button-i-gvutjk fas fa-hand-point-right"></i> Continue
+        </button>
+      </div>
+    </div>
+    <!-- Game 2 (Tersedia untuk Indonesia) -->
+    <div class="single-product-gvutjk-modern">
+      <div class="product-image-modern-gvutjk">
+        <img class="single-product-img-gvutjk" src="assets/images/subwaysurfers.jpg" alt="Subway Surfers">
+      </div>
+      <div class="product-details-modern-gvutjk">
+        <p class="single-product-p-gvutjk">Game ini menghadirkan lebih banyak tantangan, acara baru, serta berbagai jenis papan dan karakter yang unik.</p>
+        <button class="modern-button-gvutjk" onclick="showGameAlert('Subway Surfers')">
+          <i class="modern-button-i-gvutjk fas fa-hand-point-right"></i> Continue
+        </button>
+      </div>
+    </div>
+    <!-- Game 3 (Tersedia untuk Indonesia) -->
+    <div class="single-product-gvutjk-modern">
+      <div class="product-image-modern-gvutjk">
+        <img class="single-product-img-gvutjk" src="assets/images/plantsvszombies2.jpg" alt="Plants Vs Zombies 2">
+      </div>
+      <div class="product-details-modern-gvutjk">
+        <p class="single-product-p-gvutjk">Game ini menghadirkan lebih banyak tantangan, tanaman baru, serta berbagai jenis zombie yang unik.</p>
+        <button class="modern-button-gvutjk" onclick="showGameAlert('Plants Vs Zombies 2')">
+          <i class="modern-button-i-gvutjk fas fa-hand-point-right"></i> Continue
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Alert Modal -->
+<div id="gameAlert" class="alertactionvvd-action">
+  <div class="alertcontentvvd-content">
+    <button class="alertclosevvd-close-button" onclick="closeModal()">×</button>
+    <h3 id="gameTitle" class="alerttitlevvd-title"></h3>
+    <p class="alerpevvd-p">Apakah Anda ingin melanjutkan untuk mengunduh aplikasi atau melihat data lebih lanjut?</p>
+    <div class="alertbuttons-button">
+      <button id="downloadButton" class="alertbuttonvvd-button-unduh">
+        <i class="modern-button-i-gvutjk fas fa-download"></i>Download Apk
+      </button>
+      <button id="viewDataButton" class="alertbuttonvvd-button-lihat">
+        <i class="modern-button-i-gvutjk fas fa-eye"></i>View Details
+      </button>
+    </div>
+  </div>
+</div>
+<!-- Paket Harga Jasa Retas Data Game -->
+<section class="pricing-section-bulananorpermanen">
+  <div class="container-bulananorpermanen">
+    <div class="pricing-cards-bulananorpermanen">
+      <div class="pricing-card-bulananorpermanen">
+        <h3 class="plan-title-bulananorpermanen">Paket Berlangganan Blessed</h3>
+        <ul class="features-bulananorpermanen">
+          <li class="feature-item-bulananorpermanen">Bypass Pembelian Dalam Game</li>
+          <li class="feature-item-bulananorpermanen">Akses VIP ke Game Modifikasi</li>
+          <li class="feature-item-bulananorpermanen">Garansi Selama 3 Hari</li>
+          <li class="feature-item-bulananorpermanen">Batasan Satu Kali Perminggu</li>
+          <li class="feature-item-bulananorpermanen-silang">Tidak ada iklan permanen</li>
+          <li class="feature-item-bulananorpermanen-silang">Potongan Harga Lebih Besar</li>
+          <li class="feature-item-bulananorpermanen-silang">Keamanan Data Terjamin</li>
+          <li class="feature-item-bulananorpermanen-silang">Kustomisasi Akun Full</li>
+          <li class="feature-item-bulananorpermanen-silang">Dukungan 24/7 via Live Chat</li>
+          <li class="feature-item-bulananorpermanen-silang">Update Gratis Setiap Bulan</li>
+          <li class="feature-item-bulananorpermanen-silang">Perbaikan Data Gratis</li>
+          <li class="feature-item-bulananorpermanen-silang">Dukungan pelanggan prioritas</li>
+          <li class="feature-item-bulananorpermanen-silang">Akses ke Forum Eksklusif</li>
+          <li class="feature-item-bulananorpermanen-silang">Layanan Retas Data Limited</li>
+        </ul><br>
+        <button class="modern-button-bulananorpermanen" onclick="showPaymentNotification(event, 50000)">
+          <i class="modern-button-i-bulananorpermanen fas fa-shopping-cart"></i> Buy Now
+        </button>
+      </div>
+      <div class="pricing-card-bulananorpermanen popular-bulananorpermanen">
+        <h3 class="plan-title-bulananorpermanen">Paket Berlangganan Seraphic</h3>
+        <ul class="features-bulananorpermanen">
+          <li class="feature-item-bulananorpermanen">Bypass Pembelian Dalam Game</li>
+          <li class="feature-item-bulananorpermanen">Akses VIP ke Game Modifikasi</li>
+          <li class="feature-item-bulananorpermanen">Garansi Selama 7 hari</li>
+          <li class="feature-item-bulananorpermanen">Tidak Ada Batasan Perminggu</li>
+          <li class="feature-item-bulananorpermanen">Tidak ada iklan permanen</li>
+          <li class="feature-item-bulananorpermanen">Potongan Harga Lebih Besar</li>
+          <li class="feature-item-bulananorpermanen">Keamanan Data Terjamin</li>
+          <li class="feature-item-bulananorpermanen">Kustomisasi Akun Full</li>
+          <li class="feature-item-bulananorpermanen">Dukungan 24/7 via Live Chat</li>
+          <li class="feature-item-bulananorpermanen">Update Gratis Setiap Bulan</li>
+          <li class="feature-item-bulananorpermanen">Perbaikan Data Gratis</li>
+          <li class="feature-item-bulananorpermanen">Dukungan pelanggan prioritas</li>
+          <li class="feature-item-bulananorpermanen">Akses ke Forum Eksklusif</li>
+          <li class="feature-item-bulananorpermanen">Layanan Retas Data Unlimited</li>
+        </ul><br>
+        <button class="modern-button-bulananorpermanen" onclick="showPaymentNotification(event, 100000)">
+          <i class="modern-button-i-bulananorpermanen fas fa-shopping-cart"></i> Buy Now
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Footer -->
+<footer class="footer-ftrvvdm">
+  <div class="footer-container-ftrvvdm">
+    <div class="footer-logo-ftrvvdm">
+      <img src="assets/images/ViVienDo_logo.png" alt="ViVienDo Logo" style="height: 50px;" class="footer-logo-img-ftrvvdm">
+    </div>
+  </div>
+  <div class="footer-bottom-ftrvvdm">
+    <p class="footer-bottom-p-ftrvvdm">All rights reserved</p>
+    <span class="footer-version-ftrvvdm">Versi 7.8.5</span>
+  </div>
+</footer>
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/js/isotope.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/header.js"></script>
+  <script src="assets/js/schedule.js"></script>
+  <script src="assets/js/confirmpaymentindonesia.js"></script>
+  <script src="assets/js/pricingsection.js"></script>
+  <script src="assets/js/socialbar.js"></script>
+  <script src="assets/js/notifikasiyoutube.js"></script>
+  <script src="assets/js/redirectbasedcountry.js"></script>
+  <script src="assets/js/gacharate.js"></script>
+  <script src="assets/js/donasi.js"></script>
+  <script src="assets/js/games.js"></script>
+  <script src="assets/js/languageworld.js"></script>
+  <script src="assets/js/scrolltoppage.js"></script>
+  </body>
+</html>

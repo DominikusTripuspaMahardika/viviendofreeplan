@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>Event - ViVienDo</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/viviendochannel.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+  </head>
+  <body>
+    <!-- Loader Page -->
+    <div class="pageloader-viviendo"></div>
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area-navbarviviendo">
+        <nav class="main-nav-navbarviviendo">
+          <!-- Logo Section -->
+          <a href="event.html" class="logo-navbarviviendo-logo">
+            <img src="assets/images/ViVienDo_logo.png" alt="ViVienDo Logo" class="logo-navbarviviendo-logo-img">
+          </a>
+          <!-- Navigation Menu -->
+          <ul class="nav-navbarviviendo-menu">
+            <li class="nav-navbarviviendo-menu-li"><a href="home.html" class="navbarviviendo-link"><i class="fas fa-home"></i> Rumah</a></li>
+            <li class="nav-navbarviviendo-menu-li"><a href="event.html" class="navbarviviendo-link"><i class="fas fa-calendar-alt"></i> Acara</a></li>
+            <li class="nav-navbarviviendo-menu-li"><a href="itconsultation.html" class="navbarviviendo-link"><i class="fas fa-newspaper"></i> Artikel</a></li>
+            <li class="nav-navbarviviendo-menu-li"><a href="service.html" class="navbarviviendo-link"><i class="fas fa-concierge-bell"></i> Layanan</a></li>
+            <li class="nav-navbarviviendo-menu-li"><a href="contact.html" class="navbarviviendo-link"><i class="fas fa-envelope"></i> Kontak</a></li>
+          </ul>
+          <!-- Mobile Menu Trigger -->
+          <div class="menu-trigger-navbarviviendo-trigger" onclick="toggleMenunavbarviviendo()">
+            <span class="menu-trigger-navbarviviendo-trigger-span"></span>
+            <span class="menu-trigger-navbarviviendo-trigger-span"></span>
+            <span class="menu-trigger-navbarviviendo-trigger-span"></span>
+          </div>
+        </nav>
+      </header>
+    <!-- ***** Header Area End ***** -->
+    <!-- Scroll to Top Button -->
+    <button onclick="topFunction()" id="scrollGoTop" title="Go to top">
+      <svg class="scrollgotop-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 4L4 12H8V20H16V12H20L12 4Z" fill="currentColor"/>
+      </svg>
+    </button>
+  <div class="rewardvvd-container">
+    <h2 class="rewardvvd-title">Loyalty Program & Rewards</h2>
+    <p class="rewardvvd-description">Kumpulkan poin dari aktivitas login harian. Tukarkan poin dengan diskon, akses eksklusif, atau hadiah lainnya.</p>
+    
+    <!-- Level Keanggotaan -->
+    <div class="rewardvvd-levels">
+        <div class="rewardvvd-level-bronze">
+            <h3 class="rewardvvd-h3">Bronze</h3>
+            <p class="rewardvvd-poin">250,000 Poin</p>
+            <p class="rewardvvd-benefit">Benefit: Mendapatkan satu Kode Promo Potongan Harga 50% yang berlaku untuk semua produk digital.</p>
+        </div>
+        <div class="rewardvvd-level-silver">
+            <h3 class="rewardvvd-h3">Silver</h3>
+            <p class="rewardvvd-poin">800,000 Poin</p>
+            <p class="rewardvvd-benefit">Benefit: Mendapatkan satu Kode Promo Potongan Harga 80% yang berlaku untuk semua produk digital dan mendapatkan satu Data Game Gratis.</p>
+        </div>
+        <div class="rewardvvd-level-gold">
+            <h3 class="rewardvvd-h3">Gold</h3>
+            <p class="rewardvvd-poin">1,000,000+ Poin</p>
+            <p class="rewardvvd-benefit">Benefit: Mendapatkan satu Kode Promo Potongan Harga 100% yang berlaku untuk semua produk digital, mendapatkan satu Data Game Gratis, mendapatkan kode Hapus Iklan Permanen yang berlaku untuk semua aplikasi dan Undangan untuk bergabung ke Grup Komunitas.</p>
+        </div>
+    </div>
+    
+    <!-- Kalender Login Harian -->
+    <div class="rewardvvd-calendar">
+        <h3 class="rewardvvd-login-harian">Login Harian</h3>
+        <div id="calendar" class="rewardvvd-kalendar"></div>
+        <!-- Tombol Login Harian -->
+        <button id="loginButton" class="rewardvvd-login-btn">Login</button>
+    </div>
+    
+    <!-- Progress Poin -->
+    <div class="rewardvvd-progress">
+        <p class="rewardvvd-p-progres-poin">Poin Anda: <span id="userPoints">0</span></p>
+        <progress id="rewardProgress" value="0" max="5000" class="rewardvvd-rewardprogress"></progress>
+    </div>
+    
+    <!-- Tukar Poin -->
+    <div class="rewardvvd-redeem">
+        <input type="number" id="redeemPoints" placeholder="Masukkan poin" class="rewardvvd-input-tukarpoint">
+        <button class="rewardvvd-claim" id="claimReward" disabled>Kirim</button>
+        <p id="rewardStatus"></p>
+    </div>
+</div>
+    <!-- Footer -->
+    <footer class="footer-ftrvvdm">
+      <div class="footer-container-ftrvvdm">
+        <div class="footer-logo-ftrvvdm">
+          <img src="assets/images/ViVienDo_logo.png" alt="ViVienDo Logo" style="height: 50px;" class="footer-logo-img-ftrvvdm">
+        </div>
+      </div>
+      <div class="footer-bottom-ftrvvdm">
+        <p class="footer-bottom-p-ftrvvdm">All rights reserved</p>
+        <span class="footer-version-ftrvvdm">Versi 7.8.5</span>
+      </div>
+    </footer>
+    <!-- Scripts -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/header.js"></script>
+    <script src="assets/js/socialbar.js"></script>
+    <script src="assets/js/notifikasiyoutube.js"></script>
+    <script src="assets/js/languageworld.js"></script>
+    <script src="assets/js/event.js"></script>
+    <script src="assets/js/scrolltoppage.js"></script>
+  </body>
+</html>
