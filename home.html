@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>Home - ViVienDo</title>
+    <!-- Additional Favicon Formate -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/viviendochannel.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+  </head>
+<body>
+  <!-- Loader Page -->
+  <div class="pageloader-viviendo"></div>
+  <!-- ***** Header Area Start ***** -->
+  <header class="navoverlayvvdc">
+    <nav class="navoverlayvvdc-navbar">
+      <div class="navoverlayvvdc-container-fluid">
+        <!-- Logo Section -->
+        <a href="home.html" class="navoverlayvvdc-navbar-brand">
+          <img src="assets/images/ViVienDo_logo.png" alt="ViVienDo Logo" class="navoverlayvvdc-logo-img">
+        </a>
+        
+      </div>
+    </nav>
+    <!-- Overlay Menu -->
+    <div class="navoverlayvvdc-overlay" id="navoverlayvvdc-overlay">
+      <span class="navoverlayvvdc-close" id="navoverlayvvdc-close">❌</span>
+      <ul class="navoverlayvvdc-overlay-menu">
+        <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="marketplace_project.html"><i class="fas fa-shop"></i> Marketplace</a></li>
+        <li><a href="kelaskursus.html"><i class="fas fa-graduation-cap"></i> Course</a></li>
+        <li><a href="itconsultation.html"><i class="fas fa-newspaper"></i> Article</a></li>
+        <li><a href="service.html"><i class="fas fa-concierge-bell"></i> Service</a></li>
+        <li><a href="admin.html"><i class="fas fa-user"></i> Profile</a></li>
+        <li><a href="https://dominikustripuspamahardika.github.io/towerbulding/"><i class="fas fa-gamepad"></i> Games</a></li>
+        <li><a href="kalkulator.html"><i class="fas fa-calculator"></i> Calculator</a></li>
+        <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+      </ul>
+      <a href="https://www.youtube.com/@ViVienDoChannel" target="_blank" class="navoverlayvvdc-youtube">
+        <i class="fab fa-youtube"></i> YT:@ViVienDoChannel
+      </a>
+    </div>
+    <!-- Mobile Menu Trigger -->
+    <button class="navoverlayvvdc-menu-toggle" id="navoverlayvvdc-menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+  <!-- ***** Header Area End ***** -->
+  <!-- Smart Search Section -->
+<section class="smartsearchvvdc">
+  <div class="smartsearchvvdc-container">
+    <div class="smartsearchvvdc-search-container">
+      <input type="text" id="smartsearchvvdc-smart-search-input" class="smartsearchvvdc-smart-search-input" placeholder="Search games, articles, and services..." oninput="smartSearchFunction()">
+      <button class="smartsearchvvdc-search-button" onclick="performSearch()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+      </button>
+      <div id="smartsearchvvdc-search-results" class="smartsearchvvdc-search-results"></div>
+    </div>
+  </div>
+</section><br>
+  <!-- Scroll to Top Button -->
+  <button onclick="topFunction()" id="scrollGoTop" title="Go to top">
+    <svg class="scrollgotop-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 4L4 12H8V20H16V12H20L12 4Z" fill="currentColor"/>
+    </svg>
+  </button>
+  <!-- Single Product List -->
+  <!-- Popup Donasi untuk Panti Asuhan -->
+<div id="donation-popup-dnsipantiasuhan" class="donation-popup-dnsipantiasuhan">
+  <div class="donation-content-dnsipantiasuhan">
+    <button id="close-donation-popup-dnsipantiasuhan" class="close-donation-dnsipantiasuhan">&times;</button>
+    <h2 class="donation-title-dnsipantiasuhan">🙏 Mohon untuk tidak meminta data game secara gratis!</h2>
+  </div>
+</div>
+<!-- PopUp Akses Beta ViVienDo -->
+<div class="aksesbetavvdc-popup" id="aksesbetavvdc-popup">
+  <div class="aksesbetavvdc-content">
+    <button class="aksesbetavvdc-close" id="aksesbetavvvdc-close">✖</button>
+    <div class="aksesbetavvdc-icon">🎉</div>
+    <h2 class="aksesbetavvdc-title">Dapatkan Akses Beta Sekarang!</h2>
+    <p class="aksesbetavvdc-desc">
+      Ingin mencoba semua fitur <strong>Save Data</strong> secara <strong>GRATIS</strong> sebelum pengguna lain? <br><br>
+      🌟 Bergabunglah dalam program <strong>Akses Beta Eksklusif</strong> – cukup dengan <strong>berlangganan</strong>, kamu akan mendapatkan:
+    </p>
+    <ul class="aksesbetavvdc-list">
+      <li class="aksesbetavvdc-list-li">✅ Akses penuh ke fitur Save Data</li>
+      <li class="aksesbetavvdc-list-li">✅ Fitur eksklusif lebih awal sebelum rilis resmi</li>
+      <li class="aksesbetavvdc-list-li">✅ Update otomatis dan dukungan prioritas</li>
+      <li class="aksesbetavvdc-list-li">✅ Gratis biaya akses selama masa Beta</li>
+    </ul>
+    <p class="aksesbetavvdc-bottom">
+      🚀 Bergabung sekarang dan jadilah bagian dari penguji awal! <br>
+      Cukup dengan satu langkah mudah: klik tombol di bawah dan mulai langgananmu.
+    </p>
+    <button class="modern-button-bulananorpermanen" onclick="showPaymentNotification(event, 50000)">
+      <i class="modern-button-i-bulananorpermanen fas fa-shopping-cart"></i>Buy Now
+    </button>
+  </div>
+</div>
+
+<section class="eventlimitvvd">
+  <div class="eventlimitvvd-promo-container">
+      <p class="eventlimitvvd-promo-text">
+          🎉 Ikuti event terbatas! Dapatkan potongan harga <strong>10% Hingga 50%</strong><p class="eventlimitvvd-countdown"> Berakhir dalam: <span id="countdownEventLimit"></span></p>
+      </p>
+      <div class="eventlimitvvd-promo-code-box">
+          <span class="eventlimitvvd-promo-code" id="promoCodeEventLimit">LFXKZMWTQPHD</span>
+          <button class="eventlimitvvd-copy-btn" onclick="copyPromoCodeEventLimit()" aria-label="Salin Kode Promo">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="eventlimitvvd-icon">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+          </button>
+      </div>
+      <p id="copyMessageEventLimit" class="eventlimitvvd-copy-message">Kode promo telah disalin!</p>
+  </div>
+</section>
+<section class="product-section-modern-gvutjk">
+  <div class="product-grid-modern-gvutjk">
+    <!-- Game 1 (Tersedia untuk Indonesia) -->
+    <div class="single-product-gvutjk-modern">
+      <h2 class="single-product-judul-gvutjk-modern">Mob Control</h2>
+      <div class="product-image-modern-gvutjk">
+        <img class="single-product-img-gvutjk" src="assets/images/mob_control.jpg">
+      </div>
+      <div class="product-details-modern-gvutjk">
+        <p class="single-product-p-gvutjk">Game ini menghadirkan lebih banyak tantangan, acara baru, serta berbagai jenis item yang unik.</p>
+        <div class="rincian-mobcontrolvvdc">
+          <button class="modern-button-bulananorpermanen" onclick="showGameAlert('Mob Control')">
+            <i class="modern-button-i-bulananorpermanen fas fa-download"></i> Download Apk
+          </button>
+          <button class="modern-button-bulananorpermanen" onclick="showPaymentNotification(event, 30000)">
+            <i class="modern-button-i-bulananorpermanen fas fa-shopping-cart"></i>Buy Data Now
+          </button>
+          <button id="toggleButtonMobControl" class="modern-button-bulananorpermanen">
+            <i id="toggleIconMobControl" class="modern-button-i-bulananorpermanen fas fa-chevron-down"></i> View Detail Data Game
+          </button>
+          <div id="buttonContainerMobControl" style="display: none;">
+            <button class="modern-button-bulananorpermanen" onclick="showPaymentNotification(event, 35000)">
+              <i class="modern-button-i-bulananorpermanen fas fa-shopping-cart"></i>Adventure League
+            </button>
+            <button class="modern-button-bulananorpermanen" onclick="showPaymentNotification(event, 50000)">
+              <i class="modern-button-i-bulananorpermanen fas fa-shopping-cart"></i>Stardust Challenge
+            </button>
+            <button class="modern-button-bulananorpermanen" onclick="showPaymentNotification(event, 50000)">
+              <i class="modern-button-i-bulananorpermanen fas fa-shopping-cart"></i>Loadout Challenge
+            </button>
+            <button class="modern-button-bulananorpermanen" onclick="showPaymentNotification(event, 50000)">
+              <i class="modern-button-i-bulananorpermanen fas fa-shopping-cart"></i>Kaboom Season
+            </button>
+            <button class="modern-button-bulananorpermanen" onclick="showPaymentNotification(event, 75000)">
+              <i class="modern-button-i-bulananorpermanen fas fa-shopping-cart"></i>Elite Club
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Game 2 (Tersedia untuk Indonesia) -->
+    <div class="single-product-gvutjk-modern">
+      <h2 class="single-product-judul-gvutjk-modern">Subway Surfers</h2>
+      <div class="product-image-modern-gvutjk">
+        <img class="single-product-img-gvutjk" src="assets/images/subwaysurfers.jpg">
+      </div>
+      <div class="product-details-modern-gvutjk">
+        <p class="single-product-p-gvutjk">Game ini menghadirkan lebih banyak tantangan, acara baru, serta berbagai jenis papan dan karakter yang unik.</p>
+        <button class="modern-button-bulananorpermanen" onclick="showGameAlert('Subway Surfers')">
+          <i class="modern-button-i-bulananorpermanen fas fa-download"></i> Download Apk
+        </button>
+        <button class="modern-button-bulananorpermanen" onclick="showPaymentNotification(event, 30000)">
+          <i class="modern-button-i-bulananorpermanen fas fa-shopping-cart"></i> Buy Data Now
+        </button>
+      </div>
+    </div>
+    <!-- Game 3 (Tersedia untuk Indonesia) -->
+    <div class="single-product-gvutjk-modern">
+      <h2 class="single-product-judul-gvutjk-modern">Plants vs Zombies™ 2</h2>
+      <div class="product-image-modern-gvutjk">
+        <img class="single-product-img-gvutjk" src="assets/images/plantsvszombies2.jpg">
+      </div>
+      <div class="product-details-modern-gvutjk">
+        <p class="single-product-p-gvutjk">Game ini menghadirkan lebih banyak tantangan, tanaman baru, serta berbagai jenis zombie yang unik.</p>
+        <button class="modern-button-bulananorpermanen" onclick="showGameAlert('Plants vs Zombies™ 2')">
+          <i class="modern-button-i-bulananorpermanen fas fa-download"></i> Download Apk
+        </button>
+        <button class="modern-button-bulananorpermanen" onclick="showPaymentNotification(event, 30000)">
+          <i class="modern-button-i-bulananorpermanen fas fa-shopping-cart"></i> Buy Data Now
+        </button>
+      </div>
+    </div>
+    <!-- Game 4 (Tersedia untuk Indonesia) -->
+    <div class="single-product-gvutjk-modern">
+      <h2 class="single-product-judul-gvutjk-modern">Lands Of Jail</h2>
+      <div class="product-image-modern-gvutjk">
+        <img class="single-product-img-gvutjk" src="assets/images/lands_of_jail.jpg">
+      </div>
+      <div class="product-details-modern-gvutjk">
+        <p class="single-product-p-gvutjk">Game ini menghadirkan lebih banyak tantangan, acara baru, serta berbagai jenis item dan karakter yang unik.</p>
+        <button class="modern-button-bulananorpermanen" onclick="showGameAlert('Lands Of Jail')">
+          <i class="modern-button-i-bulananorpermanen fas fa-download"></i> Download Apk
+        </button>
+        <button class="modern-button-bulananorpermanen" onclick="showPaymentNotification(event, 45000)">
+          <i class="modern-button-i-bulananorpermanen fas fa-shopping-cart"></i> Buy Data Now
+        </button>
+      </div>
+    </div>
+    <!-- Game 5 (Tersedia untuk Indonesia) -->
+    <div class="single-product-gvutjk-modern">
+      <h2 class="single-product-judul-gvutjk-modern">Solo Survivor IO Game</h2>
+      <div class="product-image-modern-gvutjk">
+        <img class="single-product-img-gvutjk" src="assets/images/solo_survivor.jpg">
+      </div>
+      <div class="product-details-modern-gvutjk">
+        <p class="single-product-p-gvutjk">Game ini menghadirkan lebih banyak tantangan, acara baru, serta berbagai jenis senjata dan karakter yang unik.</p>
+        <button class="modern-button-bulananorpermanen" onclick="showGameAlert('Solo Survivor IO Game')">
+          <i class="modern-button-i-bulananorpermanen fas fa-download"></i> Download Apk
+        </button>
+        <button class="modern-button-bulananorpermanen" onclick="showPaymentNotification(event, 40000)">
+          <i class="modern-button-i-bulananorpermanen fas fa-shopping-cart"></i> Buy Data Now
+        </button>
+      </div>
+    </div>
+    <!-- Game 6 (Tersedia untuk Indonesia) -->
+    <div class="single-product-gvutjk-modern">
+      <h2 class="single-product-judul-gvutjk-modern">Genshin Impact</h2>
+      <div class="product-image-modern-gvutjk">
+        <img class="single-product-img-gvutjk" src="assets/images/genshin_impact.jpg">
+      </div>
+      <div class="product-details-modern-gvutjk">
+        <p class="single-product-p-gvutjk">Game ini menghadirkan lebih banyak tantangan, acara baru, serta berbagai jenis item, senjata dan karakter yang unik.</p>
+        <button class="modern-button-bulananorpermanen" onclick="showGameAlert('Genshin Impact')">
+          <i class="modern-button-i-bulananorpermanen fas fa-download"></i> Download Apk
+        </button>
+        <button class="modern-button-bulananorpermanen" onclick="showPaymentNotification(event, 20000)">
+          <i class="modern-button-i-bulananorpermanen fas fa-shopping-cart"></i> Buy Data Now
+        </button>
+      </div>
+    </div>
+    <!-- Game 7 (Tersedia untuk Indonesia) -->
+    <div class="single-product-gvutjk-modern">
+      <h2 class="single-product-judul-gvutjk-modern">Honkai: Star Rail</h2>
+      <div class="product-image-modern-gvutjk">
+        <img class="single-product-img-gvutjk" src="assets/images/honkai_star_rail.jpg">
+      </div>
+      <div class="product-details-modern-gvutjk">
+        <p class="single-product-p-gvutjk">Game ini menghadirkan lebih banyak tantangan, acara baru, serta berbagai jenis item, senjata dan karakter yang unik.</p>
+        <button class="modern-button-bulananorpermanen" onclick="showGameAlert('Honkai: Star Rail')">
+          <i class="modern-button-i-bulananorpermanen fas fa-download"></i> Download Apk
+        </button>
+        <button class="modern-button-bulananorpermanen" onclick="showPaymentNotification(event, 20000)">
+          <i class="modern-button-i-bulananorpermanen fas fa-shopping-cart"></i> Buy Data Now
+        </button>
+      </div>
+    </div>
+    <!-- Game 8 (Tersedia untuk Indonesia) -->
+    <div class="single-product-gvutjk-modern">
+      <h2 class="single-product-judul-gvutjk-modern">Plinko Party: Coin Raid Master</h2>
+      <div class="product-image-modern-gvutjk">
+        <img class="single-product-img-gvutjk" src="assets/images/plinko_party.jpg">
+      </div>
+      <div class="product-details-modern-gvutjk">
+        <p class="single-product-p-gvutjk">Game ini menghadirkan lebih banyak tantangan, acara baru, serta berbagai jenis koleksi dan hewan peliharaan yang unik.</p>
+        <button class="modern-button-bulananorpermanen" onclick="showGameAlert('Plinko Party: Coin Raid Master')">
+          <i class="modern-button-i-bulananorpermanen fas fa-download"></i> Download Apk
+        </button>
+        <button class="modern-button-bulananorpermanen" onclick="showPaymentNotification(event, 15000)">
+          <i class="modern-button-i-bulananorpermanen fas fa-shopping-cart"></i> Buy Data Now
+        </button>
+      </div>
+    </div>
+    <!-- Game 9 (Tersedia untuk Indonesia) -->
+    <div class="single-product-gvutjk-modern">
+      <h2 class="single-product-judul-gvutjk-modern">Mama Chef: Cooking Puzzle Game</h2>
+      <div class="product-image-modern-gvutjk">
+        <img class="single-product-img-gvutjk" src="assets/images/mama_chef.jpg">
+      </div>
+      <div class="product-details-modern-gvutjk">
+        <p class="single-product-p-gvutjk">Game ini menghadirkan lebih banyak tantangan, acara baru, serta berbagai jenis masakan dan resep yang unik.</p>
+        <button class="modern-button-bulananorpermanen" onclick="showGameAlert('Mama Chef: Cooking Puzzle Game')">
+          <i class="modern-button-i-bulananorpermanen fas fa-download"></i> Download Apk
+        </button>
+        <button class="modern-button-bulananorpermanen" onclick="showPaymentNotification(event, 20000)">
+          <i class="modern-button-i-bulananorpermanen fas fa-shopping-cart"></i> Buy Data Now
+        </button>
+      </div>
+    </div>
+    <!-- Game 10 (Tersedia untuk Indonesia) -->
+    <div class="single-product-gvutjk-modern">
+      <h2 class="single-product-judul-gvutjk-modern">Summoners Greed: Tower Defense</h2>
+      <div class="product-image-modern-gvutjk">
+        <img class="single-product-img-gvutjk" src="assets/images/summoners_greed.jpg">
+      </div>
+      <div class="product-details-modern-gvutjk">
+        <p class="single-product-p-gvutjk">Game ini menghadirkan lebih banyak tantangan, acara baru, serta berbagai jenis item dan monster yang unik.</p>
+        <button class="modern-button-bulananorpermanen" onclick="showGameAlert('Summoners Greed: Tower Defense')">
+          <i class="modern-button-i-bulananorpermanen fas fa-download"></i> Download Apk
+        </button>
+        <button class="modern-button-bulananorpermanen" onclick="showPaymentNotification(event, 35000)">
+          <i class="modern-button-i-bulananorpermanen fas fa-shopping-cart"></i> Buy Data Now
+        </button>
+      </div>
+    </div>
+    <!-- Game 11 (Tersedia untuk Indonesia) -->
+    <div class="single-product-gvutjk-modern">
+      <h2 class="single-product-judul-gvutjk-modern">Cooking Marina - cooking games</h2>
+      <div class="product-image-modern-gvutjk">
+        <img class="single-product-img-gvutjk" src="assets/images/cooking_marina.jpg">
+      </div>
+      <div class="product-details-modern-gvutjk">
+        <p class="single-product-p-gvutjk">Game ini menghadirkan lebih banyak tantangan, acara baru, serta berbagai jenis masakan dan resep yang unik.</p>
+        <button class="modern-button-bulananorpermanen" onclick="showGameAlert('Cooking Marina - cooking games')">
+          <i class="modern-button-i-bulananorpermanen fas fa-download"></i> Download Apk
+        </button>
+        <button class="modern-button-bulananorpermanen" onclick="showPaymentNotification(event, 25000)">
+          <i class="modern-button-i-bulananorpermanen fas fa-shopping-cart"></i> Buy Data Now
+        </button>
+      </div>
+    </div>
+    <!-- Game 12 (Tersedia untuk Indonesia) -->
+    <div class="single-product-gvutjk-modern">
+      <h2 class="single-product-judul-gvutjk-modern">Cooking Sizzle: Master Chef</h2>
+      <div class="product-image-modern-gvutjk">
+        <img class="single-product-img-gvutjk" src="assets/images/cooking_sizzle.jpg">
+      </div>
+      <div class="product-details-modern-gvutjk">
+        <p class="single-product-p-gvutjk">Game ini menghadirkan lebih banyak tantangan, acara baru, serta berbagai jenis masakan dan resep yang unik.</p>
+        <button class="modern-button-bulananorpermanen" onclick="showGameAlert('Cooking Sizzle: Master Chef')">
+          <i class="modern-button-i-bulananorpermanen fas fa-download"></i> Download Apk
+        </button>
+        <button class="modern-button-bulananorpermanen" onclick="showPaymentNotification(event, 25000)">
+          <i class="modern-button-i-bulananorpermanen fas fa-shopping-cart"></i> Buy Data Now
+        </button>
+      </div>
+    </div>
+    <!-- Game 13 (Tersedia untuk Indonesia) -->
+    <div class="single-product-gvutjk-modern">
+      <h2 class="single-product-judul-gvutjk-modern">Orecraft: Orc Mining Camp</h2>
+      <div class="product-image-modern-gvutjk">
+        <img class="single-product-img-gvutjk" src="assets/images/orecraft.jpg">
+      </div>
+      <div class="product-details-modern-gvutjk">
+        <p class="single-product-p-gvutjk">Game ini menghadirkan lebih banyak tantangan, acara baru, serta berbagai jenis item dan senjata yang unik.</p>
+        <button class="modern-button-bulananorpermanen" onclick="showGameAlert('Orecraft: Orc Mining Camp')">
+          <i class="modern-button-i-bulananorpermanen fas fa-download"></i> Download Apk
+        </button>
+        <button class="modern-button-bulananorpermanen" onclick="showPaymentNotification(event, 50000)">
+          <i class="modern-button-i-bulananorpermanen fas fa-shopping-cart"></i> Buy Data Now
+        </button>
+      </div>
+    </div>
+    <!-- Game 14 (Tersedia untuk Indonesia) -->
+    <div class="single-product-gvutjk-modern">
+      <h2 class="single-product-judul-gvutjk-modern">Blue Archive</h2>
+      <div class="product-image-modern-gvutjk">
+        <img class="single-product-img-gvutjk" src="assets/images/blue_archive.jpg">
+      </div>
+      <div class="product-details-modern-gvutjk">
+        <p class="single-product-p-gvutjk">Game ini menghadirkan lebih banyak tantangan, acara baru, serta berbagai jenis item, karakter, kemampuan dan senjata yang unik.</p>
+        <button class="modern-button-bulananorpermanen" onclick="showGameAlert('Blue Archive')">
+          <i class="modern-button-i-bulananorpermanen fas fa-download"></i> Download Apk
+        </button>
+        <button class="modern-button-bulananorpermanen" onclick="showPaymentNotification(event, 25000)">
+          <i class="modern-button-i-bulananorpermanen fas fa-shopping-cart"></i> Buy Data Now
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Alert Modal -->
+<div id="gameAlertModal" class="alertactionvvd-action">
+  <div class="alertcontentvvd-content">
+    <button class="alertclosevvd-close-button" onclick="closeAlertModal()">×</button>
+    <h3 id="gameTitle" class="alerttitlevvd-title"></h3>
+    <p class="alerpevvd-p">Apakah Anda ingin melanjutkan untuk mengunduh aplikasi atau melihat data lebih lanjut?</p>
+    <div class="alertbuttons-button">
+      <button id="downloadButton" class="alertbuttonvvd-button-unduh">
+        <i class="modern-button-i-gvutjk fas fa-download"></i>Download Apk
+      </button>
+      <button id="viewDataButton" class="alertbuttonvvd-button-lihat">
+        <i class="modern-button-i-gvutjk fas fa-info-circle"></i>View Details
+      </button>
+    </div>
+  </div>
+</div>
+<!-- Footer -->
+<footer class="footer-ftrvvdm">
+  <div class="footer-container-ftrvvdm">
+    <div class="footer-logo-ftrvvdm">
+      <img src="assets/images/ViVienDo_logo.png" alt="ViVienDo Logo" style="height: 50px;" class="footer-logo-img-ftrvvdm">
+    </div>
+  </div>
+  <div class="footer-bottom-ftrvvdm">
+    <p class="footer-bottom-p-ftrvvdm">All rights reserved</p>
+    <span class="footer-version-ftrvvdm">Versi 7.8.5</span>
+  </div>
+</footer>
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/js/isotope.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/header.js"></script>
+  <script src="assets/js/schedule.js"></script>
+  <script src="assets/js/confirmpaymentindonesia.js"></script>
+  <script src="assets/js/pricingsection.js"></script>
+  <script src="assets/js/socialbar.js"></script>
+  <script src="assets/js/notifikasiyoutube.js"></script>
+  <script src="assets/js/redirectbasedcountry.js"></script>
+  <script src="assets/js/gacharate.js"></script>
+  <script src="assets/js/donasi.js"></script>
+  <script src="assets/js/games.js"></script>
+  <script src="assets/js/languageworld.js"></script>
+  <script src="assets/js/scrolltoppage.js"></script>
+  <script src="assets/js/tabheaders.js"></script>
+  <script src="assets/js/smartsearchvvdc.js"></script>
+  <script src="assets/js/testimoniulasanuser.js"></script>
+  <script src="assets/js/gtasa.js"></script>
+  <script src="assets/js/mobcontrol.js"></script>
+  <script src="assets/js/aksesbeta.js"></script>
+  </body>
+</html>

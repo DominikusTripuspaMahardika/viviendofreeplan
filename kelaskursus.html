@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>Kelas & Kursus Online - ViVienDo</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/viviendochannel.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+  </head>
+  <body>
+    <!-- Loader Page -->
+    <div class="pageloader-viviendo"></div>
+    <!-- ***** Header Area Start ***** -->
+    <header class="navoverlayvvdc">
+      <nav class="navoverlayvvdc-navbar">
+        <div class="navoverlayvvdc-container-fluid">
+          <!-- Logo Section -->
+          <a href="kelaskursus.html" class="navoverlayvvdc-navbar-brand">
+            <img src="assets/images/ViVienDo_logo.png" alt="ViVienDo Logo" class="navoverlayvvdc-logo-img">
+          </a>
+          
+        </div>
+      </nav>
+      <!-- Overlay Menu -->
+      <div class="navoverlayvvdc-overlay" id="navoverlayvvdc-overlay">
+        <span class="navoverlayvvdc-close" id="navoverlayvvdc-close">❌</span>
+        <ul class="navoverlayvvdc-overlay-menu">
+          <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="marketplace_project.html"><i class="fas fa-shop"></i> Marketplace</a></li>
+          <li><a href="kelaskursus.html"><i class="fas fa-graduation-cap"></i> Course</a></li>
+          <li><a href="itconsultation.html"><i class="fas fa-newspaper"></i> Article</a></li>
+          <li><a href="service.html"><i class="fas fa-concierge-bell"></i> Service</a></li>
+          <li><a href="admin.html"><i class="fas fa-user"></i> Profile</a></li>
+          <li><a href="https://dominikustripuspamahardika.github.io/towerbulding/"><i class="fas fa-gamepad"></i> Games</a></li>
+          <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+        <a href="https://www.youtube.com/@ViVienDoChannel" target="_blank" class="navoverlayvvdc-youtube">
+          <i class="fab fa-youtube"></i> YT:@ViVienDoChannel
+        </a>
+      </div>
+      <!-- Mobile Menu Trigger -->
+      <button class="navoverlayvvdc-menu-toggle" id="navoverlayvvdc-menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+    <!-- ***** Header Area End ***** -->
+    <!-- Scroll to Top Button -->
+    <button onclick="topFunction()" id="scrollGoTop" title="Go to top">
+      <svg class="scrollgotop-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 4L4 12H8V20H16V12H20L12 4Z" fill="currentColor"/>
+      </svg>
+    </button>
+    <section class="kursuskelasonline-container-kursusvvd">
+        <div class="kursuskelasonline-header-kursusvvd">
+          <h2 class="kursuskelasonline-header-kursusvvd-h2">Kelas & Kursus Online</h2>
+          <input type="text" id="searchKursus" placeholder="Search for courses..." onkeyup="filterKursus()">
+          <select id="filterKategori" onchange="filterKursus()">
+            <option value="">Semua Kategori</option>
+            <option value="Teknologi">Teknologi</option>
+            <option value="Desain">Desain</option>
+            <option value="Bisnis">Bisnis</option>
+            <option value="Pemasaran">Pemasaran</option>
+            <option value="Fotografi">Fotografi</option>
+          </select>
+        </div>
+        <div class="kursuskelasonline-list-kursusvvd">
+          <div class="kursuskelasonline-item-kursusvvd" data-kategori="Teknologi">
+            <img src="assets/images/kursus_1.jpg" class="kursuskelasonline-item-kursusvvd-img">
+            <h3 class="kursuskelasonline-item-kursusvvd-h3">Pelajari Pengembangan Web</h3>
+            <p class="kursuskelasonline-item-kursusvvd-p">Durasi: 4 Jam - Level: Lanjutan</p>
+            <span class="kursuskelasonline-item-kursusvvd-span">⭐ 4.8 (1200 ulasan)</span>
+            <button class="kursuskelasonline-item-kursusvvd-button" onclick="showCoursePaymentNotificationPaymentKursusKelasOnline(event, 120000)"><i class="fas fa-shopping-bag"></i> Buy Now</button>
+          </div>
+          <div class="kursuskelasonline-item-kursusvvd" data-kategori="Teknologi">
+            <img src="assets/images/kursus_2.jpg" class="kursuskelasonline-item-kursusvvd-img">
+            <h3 class="kursuskelasonline-item-kursusvvd-h3">Meretas Data Permainan</h3>
+            <p class="kursuskelasonline-item-kursusvvd-p">Durasi: 1,5 Jam - Level: Expert</p>
+            <span class="kursuskelasonline-item-kursusvvd-span">⭐ 4.9 (1800 ulasan)</span>
+            <button class="kursuskelasonline-item-kursusvvd-button" onclick="showCoursePaymentNotificationPaymentKursusKelasOnline(event, 150000)"><i class="fas fa-shopping-bag"></i> Buy Now</button>
+          </div>
+          <div class="kursuskelasonline-item-kursusvvd" data-kategori="Bisnis">
+            <img src="assets/images/kursus_3.jpg" class="kursuskelasonline-item-kursusvvd-img">
+            <h3 class="kursuskelasonline-item-kursusvvd-h3">Strategi Bisnis Digital</h3>
+            <p class="kursuskelasonline-item-kursusvvd-p">Durasi: 2 Jam - Level: Menengah</p>
+            <span class="kursuskelasonline-item-kursusvvd-span">⭐ 4.6 (800 ulasan)</span>
+            <button class="kursuskelasonline-item-kursusvvd-button" onclick="showCoursePaymentNotificationPaymentKursusKelasOnline(event, 100000)"><i class="fas fa-shopping-bag"></i> Buy Now</button>
+          </div>
+          <div class="kursuskelasonline-item-kursusvvd" data-kategori="Desain">
+            <img src="assets/images/kursus_4.jpg" class="kursuskelasonline-item-kursusvvd-img">
+            <h3 class="kursuskelasonline-item-kursusvvd-h3">Dasar-dasar UI/UX</h3>
+            <p class="kursuskelasonline-item-kursusvvd-p">Durasi: 3 Jam - Level: Pemula</p>
+            <span class="kursuskelasonline-item-kursusvvd-span">⭐ 4.7 (900 ulasan)</span>
+            <button class="kursuskelasonline-item-kursusvvd-button" onclick="showCoursePaymentNotificationPaymentKursusKelasOnlineCoominigSoon(event, 100000)"><i class="fas fa-shopping-bag"></i> Buy Now</button>
+          </div>
+          <div class="kursuskelasonline-item-kursusvvd" data-kategori="Pemasaran">
+            <img src="assets/images/kursus_5.jpg" class="kursuskelasonline-item-kursusvvd-img">
+            <h3 class="kursuskelasonline-item-kursusvvd-h3">Pemasaran Digital</h3>
+            <p class="kursuskelasonline-item-kursusvvd-p">Durasi: 15 Jam - Level: Lanjutan</p>
+            <span class="kursuskelasonline-item-kursusvvd-span">⭐ 4.9 (1500 ulasan)</span>
+            <button class="kursuskelasonline-item-kursusvvd-button" onclick="showCoursePaymentNotificationPaymentKursusKelasOnlineCoominigSoon(event, 150000)"><i class="fas fa-shopping-bag"></i> Buy Now</button>
+          </div>
+          <div class="kursuskelasonline-item-kursusvvd" data-kategori="Fotografi">
+            <img src="assets/images/kursus_6.jpg" class="kursuskelasonline-item-kursusvvd-img">
+            <h3 class="kursuskelasonline-item-kursusvvd-h3">Fotografi Profesional</h3>
+            <p class="kursuskelasonline-item-kursusvvd-p">Durasi: 7 Jam - Level: Pemula</p>
+            <span class="kursuskelasonline-item-kursusvvd-span">⭐ 4.5 (700 ulasan)</span>
+            <button class="kursuskelasonline-item-kursusvvd-button" onclick="showCoursePaymentNotificationPaymentKursusKelasOnlineCoominigSoon(event, 90000)"><i class="fas fa-shopping-bag"></i> Buy Now</button>
+          </div>
+        </div>
+      </section>
+    <!-- Footer -->
+    <footer class="footer-ftrvvdm">
+      <div class="footer-container-ftrvvdm">
+        <div class="footer-logo-ftrvvdm">
+          <img src="assets/images/ViVienDo_logo.png" alt="ViVienDo Logo" style="height: 50px;" class="footer-logo-img-ftrvvdm">
+        </div>
+      </div>
+      <div class="footer-bottom-ftrvvdm">
+        <p class="footer-bottom-p-ftrvvdm">All rights reserved</p>
+        <span class="footer-version-ftrvvdm">Versi 7.8.5</span>
+      </div>
+    </footer>
+    <!-- Scripts -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/header.js"></script>
+    <script src="assets/js/socialbar.js"></script>
+    <script src="assets/js/notifikasiyoutube.js"></script>
+    <script src="assets/js/languageworld.js"></script>
+    <script src="assets/js/scrolltoppage.js"></script>
+    <script src="assets/js/kursuskelasonline.js"></script>
+    <script src="assets/js/confirmpaymentkelaskursus.js"></script>
+  </body>
+</html>
